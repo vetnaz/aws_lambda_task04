@@ -16,7 +16,6 @@ import java.util.Map;
 
 @LambdaHandler(lambdaName = "sqs_handler",
         roleName = "sqs_handler-role",
-        isPublishVersion = true,
         runtime = DeploymentRuntime.JAVA8
 )
 @SqsTriggerEventSource(targetQueue = "async_queue", batchSize = 10)

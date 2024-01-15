@@ -11,8 +11,7 @@ import com.syndicate.deployment.annotations.resources.DependsOn;
 import com.syndicate.deployment.model.ResourceType;
 
 @LambdaHandler(lambdaName = "sns_handler",
-        roleName = "sns_handler-role",
-        isPublishVersion = true
+        roleName = "sns_handler-role"
 )
 @SnsEventSource(targetTopic = "lambda_topic")
 @DependsOn(name = "lambda_topic", resourceType = ResourceType.SNS_TOPIC)
